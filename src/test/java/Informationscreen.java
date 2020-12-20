@@ -1,5 +1,4 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -8,6 +7,7 @@ import java.io.IOException;
 public class Informationscreen {
 
     public static void fillInfo(WebDriver driver) throws InterruptedException, IOException {
+        Thread.sleep(500);
         driver.findElement(By.xpath("//span[.='למישהו אחר']")).click();
         //Thread.sleep(5000);
         //driver.findElement(By.partialLinkText("יש להשלים את שם המקבל")).sendKeys("John Doe");
@@ -29,6 +29,9 @@ public class Informationscreen {
 
         // Upload pic
         driver.findElement(By.name("fileUpload")).sendKeys("C:\\Users\\Doron\\IdeaProjects\\BuyMe Project\\e-bike.JPG");
+        // Uploading picture from another web-site
+        SvPicAnotherSite.svPicAnotherSite();
+        driver.findElement(By.name("fileUpload")).sendKeys("C:\\Users\\Doron\\IdeaProjects\\BuyMe DB\\e-bike-32977.PNG");
 
         // When to send
         driver.findElement(By.className("send-now")).click();

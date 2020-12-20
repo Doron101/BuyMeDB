@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BuyMe Project" />
         <module name="BuyMe2" />
+        <module name="BuyMe DB" />
         <module name="SeleniumExtra" />
         <module name="Lesson 11 SeleniumExtra" />
       </profile>
